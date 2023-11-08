@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add_your_status">Add Your Status</string>
+    <string name="select_your_availability">Select Your Availability</string>
+    <string name="select_hyper_local_distance">Select Hyper Local Distance</string>
+    <string name="select_purpose">Select Purpose</string>
+    <string name="save_explore"><![CDATA[Save & Explore]]></string>
+    <string-array name="select_your_availability">
+        <item>Available | Hey Let Us Connect</item>
+        <item>Away | Stay Discrete and Watch</item>
+        <item>Busy | Do not disturb | Will catch up later</item>
+        <item>SOS | Emergency! Need assistance! HELP</item>
+    </string-array>
+
+    <string-array name="purpose">
+        <item>Coffee</item>
+        <item>Business</item>
+        <item>Hobbies</item>
+        <item>Friendship</item>
+        <item>Movies</item>
+        <item>Dinning</item>
+        <item>Dating</item>
+        <item>Matrimony</item>
+    </string-array>
+</resources>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment"
+    android:paddingHorizontal="12dp">
+
+    <TextView
+        android:id="@+id/text_sya_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_your_availability"
+        android:textColor="?colorPrimaryVariant"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <RelativeLayout
+        android:id="@+id/layout_sya_dashboard"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/spn_rounded_stroke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.010"
+        app:layout_constraintStart_toStartOf="@id/text_sya_dashboard"
+        app:layout_constraintTop_toBottomOf="@id/text_sya_dashboard">
+
+        <Spinner
+            android:id="@+id/spinner_sya_dashboard"
+            style="@style/SpinnerTheme"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:spinnerMode="dropdown" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_ays_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_your_status"
+        android:textStyle="bold"
+        android:textColor="?colorPrimaryVariant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/layout_sya_dashboard"
+        app:layout_constraintTop_toBottomOf="@id/layout_sya_dashboard"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <EditText
+        android:id="@+id/edittext_ays_dashboard"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="left"
+        android:ems="10"
+        android:inputType="textImeMultiLine"
+        android:lines="5"
+        android:textSize="14dp"
+        android:text="Hi community!, I am open to new connections 😊"
+        android:padding="8dp"
+        android:background="@drawable/spn_rounded_stroke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_ays_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/text_ays_dashboard"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_shld_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_hyper_local_distance"
+        android:textStyle="bold"
+        android:textColor="?colorPrimaryVariant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/edittext_ays_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_ays_dashboard"
+        app:layout_constraintVertical_bias="0.05" />
+
+
+    <hearsilent.discreteslider.DiscreteSlider
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="50dp"
+        app:ds_count="101"
+        app:ds_thumbColor="?colorPrimary"
+        app:ds_trackColor="?colorPrimaryVariant"
+
+        app:ds_inactiveTrackColor="#B4C3CD"
+        app:layout_constraintBottom_toTopOf="@+id/text_sp_dashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_shld_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/text_shld_dashboard"
+        app:layout_constraintVertical_bias="0"
+        app:ds_thumbRadius="6dp"/>
+    <TextView
+        android:id="@+id/text_startkm_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Km"
+        app:layout_constraintStart_toStartOf="@id/seekBar"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <TextView
+        android:id="@+id/text_endkm_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 Km"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@id/seekBar"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/text_sp_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_purpose"
+        android:textColor="?colorPrimaryVariant"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/text_startkm_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/text_startkm_dashboard"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rycview_sp_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintTop_toBottomOf="@+id/text_sp_dashboard" />
+
+    <Button
+        android:id="@+id/button_sne_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/save_explore"
+        android:background="@drawable/btn_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rycview_sp_dashboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
